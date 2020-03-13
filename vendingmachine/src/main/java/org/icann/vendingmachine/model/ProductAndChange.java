@@ -2,6 +2,12 @@ package org.icann.vendingmachine.model;
 
 import java.util.Map;
 
+/**
+ * The return type of the completePurchase() method. It has a product and a map for the coins and count as the change.
+ *  
+ * @author Jin
+ *
+ */
 public class ProductAndChange {
 	private Product product;
 	private Map<Coin, Integer> change;

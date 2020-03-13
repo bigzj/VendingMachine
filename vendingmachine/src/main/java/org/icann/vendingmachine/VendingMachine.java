@@ -10,6 +10,12 @@ import org.icann.vendingmachine.model.Coin;
 import org.icann.vendingmachine.model.Product;
 import org.icann.vendingmachine.model.ProductAndChange;
 
+/**
+ * Main class of this application
+ * 
+ * @author Jin
+ *
+ */
 public class VendingMachine {
 	// money received so far for the current transaction
 	private int tenderedAmount = 0;
