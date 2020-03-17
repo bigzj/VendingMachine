@@ -4,15 +4,16 @@ import java.util.Map;
 
 /**
  * The return type of the completePurchase() method. It has a product and a map for the coins and count as the change.
+ * For machines that does not accept coin or cash, the change could be null
  *  
  * @author Jin
  *
  */
-public class ProductAndChange {
+public class ProductAndCoinChange {
 	private Product product;
 	private Map<Coin, Integer> change;
 	
-	public ProductAndChange(Product product, Map<Coin, Integer> change) {
+	public ProductAndCoinChange(Product product, Map<Coin, Integer> change) {
 		this.product = product;
 		this.change = change;
 	}
