@@ -6,6 +6,7 @@ import org.icann.vendingmachine.VendingMachine;
 import org.icann.vendingmachine.model.Coin;
 import org.icann.vendingmachine.service.IConsumerService;
 import org.icann.vendingmachine.service.ISupplierService;
+import org.icann.vendingmachine.service.impl.CoinConsumerService;
 import org.icann.vendingmachine.service.impl.SodaSupplierService;
 
 /**
@@ -30,12 +31,7 @@ public class CoinSodaVendingMachine extends VendingMachine {
 	 * 	@param coin
 	 */
 	public int insertCoin(Coin coin) {
-		System.out.println("coin received " + coin);
-		
-		tenderedAmount += coin.getValue();
-		coinInventory.put(coin,  coinInventory.get(coin) + 1);
-
-		return tenderedAmount;
+		return ((CoinConsumerService)consumerService).insertCoin(coin, this);
 	}
 	
 	/**
